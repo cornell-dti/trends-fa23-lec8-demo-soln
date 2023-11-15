@@ -33,7 +33,7 @@ taskRouter.post("/addTask", async (req, res) => {
     await addTask(task);
 
     res.status(200).send({
-      message: `SUCCESS added ${task} to the tasks collection in Firestore`,
+      message: `SUCCESS added ${task} to the tasks collection in Firestore`
     });
   } catch (err) {
     res.status(500).json({
