@@ -5,8 +5,6 @@ const provider = new GoogleAuthProvider();
 
 export const signIn = async () => {
   try {
-    console.log(auth);
-    console.log(provider);
     const result = await signInWithPopup(auth, provider);
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const token = credential?.accessToken;
