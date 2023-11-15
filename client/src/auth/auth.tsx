@@ -3,8 +3,6 @@ import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 const provider = new GoogleAuthProvider();
 
-export const isUserLoggedIn = () => auth.currentUser !== null;
-
 export const signIn = async () => {
   try {
     console.log(auth);
@@ -25,14 +23,6 @@ export const signIn = async () => {
       `An error ${code} occurred when logging user with email: ${email} with message: ${message}`,
     );
     return null;
-  }
-};
-
-export const getUser = () => {
-  if (!auth.currentUser) {
-    return null;
-  } else {
-    return auth.currentUser;
   }
 };
 
