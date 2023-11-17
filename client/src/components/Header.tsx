@@ -12,7 +12,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { ArrowUpCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import { isUserLoggedIn, signIn, signOut } from "../auth/auth";
+import { signIn, signOut } from "../auth/auth";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -75,7 +75,7 @@ interface HeaderSimpleProps {
 }
 
 export function HeaderSimple({ links }: HeaderSimpleProps) {
-  const [isLoggedIn, setIsLoggedIn] = useState(isUserLoggedIn());
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();

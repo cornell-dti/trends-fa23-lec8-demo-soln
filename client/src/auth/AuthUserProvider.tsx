@@ -6,7 +6,7 @@ import {
   useState,
   useEffect,
 } from "react";
-import { auth } from "../utils/firebaseirebase";
+import { auth } from "../utils/firebase";
 
 type AuthData = {
   user?: User | null;
